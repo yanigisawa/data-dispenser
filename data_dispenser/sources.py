@@ -213,7 +213,7 @@ def _html_to_odicts(html, *args, **kwargs):
     if (tbl.thead or tbl).tr.th:
         headers = [th.text for th in (tbl.thead or tbl).tr.find_all('th', recursive=False)]
     else:
-        headers = [td.text for td in (tbl.tbody or tbl).tr.find_all('td', recursive-False)]
+        headers = [td.text for td in (tbl.tbody or tbl).tr.find_all('td', recursive=False)]
     for (col_num, header) in enumerate(headers):
         header = header or "Field%d" % (col_num + 1)
     for tr in (tbl.tbody or tbl).find_all('tr', recursive=False):
